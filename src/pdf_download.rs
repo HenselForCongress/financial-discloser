@@ -3,9 +3,10 @@ use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use std::fs::{self, File};
 use std::io::Write;
-use log::info;
+use log::{info, error};
 use tokio::task;
 use anyhow::{Result, Context};
+use indicatif::ProgressBar;
 
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(rename_all = "PascalCase")]
