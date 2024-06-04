@@ -1,0 +1,29 @@
+[package]
+name = "financial-discloser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Update reqwest to enable async features
+reqwest = { version = "0.11", features = ["json", "gzip"] }
+
+zip = "0.5"
+quick-xml = { version = "0.31", features = ["serialize"] }
+# Serde for serialization and deserialization
+serde = { version = "1.0", features = ["derive"] }
+# Yaml serialization and deserialization
+serde_yaml = "0.8.21"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Add tokio for async runtime
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0.86"
+
+
+# Sentry Error Monitoring
+sentry = "0.33.0"
+tracing-subscriber = "0.3.18"
+tracing = "0.1.40"

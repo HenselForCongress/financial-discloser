@@ -1,0 +1,8 @@
+{
+  "index.ignored_file_patterns" : [
+    "data\/raw\/reports\/*",
+    "*.pdf"
+  ],
+  "workspace.art_style" : 0,
+  "workspace.name" : "Financial Discloser"
+}
