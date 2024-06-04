@@ -15,7 +15,7 @@ async fn main() {
     init_logger();
 
     // Send a test event to Sentry
-    send_test_event();
+    // send_test_event();
 
     info!("Starting report generation...");
 
@@ -44,7 +44,7 @@ fn send_test_event() {
 
 async fn run_reports() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     info!("Starting Index Check...");
-    build_index::get_updated_index().await?;
+    //build_index::get_updated_index().await?;
     info!("Index Check completed.");
 
     info!("Starting PDF Downloader...");
