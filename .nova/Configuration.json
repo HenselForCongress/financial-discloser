@@ -1,4 +1,5 @@
 {
+  "index.enabled" : false,
   "index.ignored_file_patterns" : [
     "data\/raw\/reports\/*",
     "*.pdf",
