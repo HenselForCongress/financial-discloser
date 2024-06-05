@@ -69,7 +69,7 @@ fn save_to_yaml(members: &Vec<Member>, output_file: &str) -> Result<()> {
 
 pub async fn get_updated_index() -> Result<()> {
     let mut all_members = Vec::new();
-    for year in 2022..=2024 {
+    for year in 2008..=2024 {
         match download_and_extract(year).await {
             Ok(xml_filepath) => {
                 info!("Downloaded and saved XML for year: {}", year);

@@ -8,11 +8,10 @@ use tracing_subscriber::FmtSubscriber;
 
 #[tokio::main]
 async fn main() {
+    init_logger();
+
     // Initialize Sentry if SENTRY_DSN is set
     let _guard = init_sentry();
-
-    // Initialize the logger
-    init_logger();
 
     // Send a test event to Sentry
     // send_test_event();
@@ -44,7 +43,7 @@ fn send_test_event() {
 
 async fn run_reports() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     info!("Starting Index Check...");
-    //build_index::get_updated_index().await?;
+    build_index::get_updated_index().await?;
     info!("Index Check completed.");
 
     info!("Starting PDF Downloader...");
@@ -55,7 +54,6 @@ async fn run_reports() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 }
 
 fn init_logger() {
-    // Initialize logging based on LOG_LEVEL environment variable
     let log_level = env::var("LOG_LEVEL").unwrap_or_else(|_| "info".to_string());
     let log_filter = match log_level.as_str() {
         "error" => Level::ERROR,

@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Update reqwest to enable async features
-reqwest = { version = "0.11", features = ["json", "gzip"] }
+# Enable async features for reqwest
+reqwest = { version = "0.11", features = ["json", "gzip", "stream", "blocking"] }
 
 zip = "0.5"
 quick-xml = { version = "0.31", features = ["serialize"] }
