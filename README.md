@@ -2,6 +2,8 @@
 
 The Financial Discloser is a Rust-based application dedicated to downloading financial disclosure reports in PDF format and generating an index based on available data from specific government repositories. This project is useful for researchers and analysts who need organized access to these documents for further analysis.
 
+_This readme was gen'd with AI. I'm tired and haven't had time to write a proper one. bite me_
+
 ## Table of Contents
 1. [Features](#features)
 2. [Installation](#installation)
